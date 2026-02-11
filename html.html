@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+&nbsp;   <meta charset="UTF-8">
+
+&nbsp;   <!-- 适配移动端 -->
+
+&nbsp;   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+&nbsp;   <title>我的个人主页</title>
+
+&nbsp;   <style>
+
+&nbsp;       /\* 全局样式重置 \*/
+
+&nbsp;       \* {
+
+&nbsp;           margin: 0;
+
+&nbsp;           padding: 0;
+
+&nbsp;           box-sizing: border-box;
+
+&nbsp;           font-family: "Microsoft YaHei", sans-serif;
+
+&nbsp;       }
+
+
+
+&nbsp;       /\* 导航栏样式 \*/
+
+&nbsp;       nav {
+
+&nbsp;           background-color: #2c3e50;
+
+&nbsp;           padding: 1rem 2rem;
+
+&nbsp;           color: white;
+
+&nbsp;       }
+
+
+
+&nbsp;       .nav-container {
+
+&nbsp;           max-width: 1200px;
+
+&nbsp;           margin: 0 auto;
+
+&nbsp;           display: flex;
+
+&nbsp;           justify-content: space-between;
+
+&nbsp;           align-items: center;
+
+&nbsp;       }
+
+
+
+&nbsp;       .nav-links a {
+
+&nbsp;           color: white;
+
+&nbsp;           text-decoration: none;
+
+&nbsp;           margin-left: 2rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .nav-links a:hover {
+
+&nbsp;           color: #3498db;
+
+&nbsp;       }
+
+
+
+&nbsp;       /\* 主体内容样式 \*/
+
+&nbsp;       main {
+
+&nbsp;           max-width: 1200px;
+
+&nbsp;           margin: 2rem auto;
+
+&nbsp;           padding: 0 2rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .hero-section {
+
+&nbsp;           display: flex;
+
+&nbsp;           align-items: center;
+
+&nbsp;           gap: 3rem;
+
+&nbsp;           margin-bottom: 3rem;
+
+&nbsp;           padding-bottom: 2rem;
+
+&nbsp;           border-bottom: 1px solid #eee;
+
+&nbsp;       }
+
+
+
+&nbsp;       .hero-img {
+
+&nbsp;           width: 200px;
+
+&nbsp;           height: 200px;
+
+&nbsp;           border-radius: 50%;
+
+&nbsp;           object-fit: cover;
+
+&nbsp;           border: 5px solid #f1f1f1;
+
+&nbsp;       }
+
+
+
+&nbsp;       .hero-text h1 {
+
+&nbsp;           font-size: 2.5rem;
+
+&nbsp;           color: #2c3e50;
+
+&nbsp;           margin-bottom: 1rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .hero-text p {
+
+&nbsp;           font-size: 1.1rem;
+
+&nbsp;           color: #666;
+
+&nbsp;           line-height: 1.6;
+
+&nbsp;       }
+
+
+
+&nbsp;       /\* 技能卡片样式 \*/
+
+&nbsp;       .skills-section {
+
+&nbsp;           margin-top: 3rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .skills-section h2 {
+
+&nbsp;           font-size: 1.8rem;
+
+&nbsp;           color: #2c3e50;
+
+&nbsp;           margin-bottom: 2rem;
+
+&nbsp;           border-left: 5px solid #3498db;
+
+&nbsp;           padding-left: 1rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .skills-cards {
+
+&nbsp;           display: grid;
+
+&nbsp;           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+&nbsp;           gap: 2rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .card {
+
+&nbsp;           background-color: white;
+
+&nbsp;           border-radius: 8px;
+
+&nbsp;           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+&nbsp;           padding: 1.5rem;
+
+&nbsp;           transition: transform 0.3s ease;
+
+&nbsp;       }
+
+
+
+&nbsp;       .card:hover {
+
+&nbsp;           transform: translateY(-5px);
+
+&nbsp;       }
+
+
+
+&nbsp;       .card h3 {
+
+&nbsp;           color: #3498db;
+
+&nbsp;           margin-bottom: 1rem;
+
+&nbsp;           font-size: 1.3rem;
+
+&nbsp;       }
+
+
+
+&nbsp;       .card p {
+
+&nbsp;           color: #666;
+
+&nbsp;           line-height: 1.5;
+
+&nbsp;       }
+
+
+
+&nbsp;       /\* 页脚样式 \*/
+
+&nbsp;       footer {
+
+&nbsp;           background-color: #2c3e50;
+
+&nbsp;           color: white;
+
+&nbsp;           text-align: center;
+
+&nbsp;           padding: 2rem;
+
+&nbsp;           margin-top: 4rem;
+
+&nbsp;       }
+
+&nbsp;   </style>
+
+</head>
+
+<body>
+
+&nbsp;   <!-- 导航栏 -->
+
+&nbsp;   <nav>
+
+&nbsp;       <div class="nav-container">
+
+&nbsp;           <div class="logo">
+
+&nbsp;               <h2>我的主页</h2>
+
+&nbsp;           </div>
+
+&nbsp;           <div class="nav-links">
+
+&nbsp;               <a href="#home">首页</a>
+
+&nbsp;               <a href="#skills">技能</a>
+
+&nbsp;               <a href="#contact">联系我</a>
+
+&nbsp;           </div>
+
+&nbsp;       </div>
+
+&nbsp;   </nav>
+
+
+
+&nbsp;   <!-- 主体内容 -->
+
+&nbsp;   <main>
+
+&nbsp;       <!-- 个人介绍区域 -->
+
+&nbsp;       <section id="home" class="hero-section">
+
+&nbsp;           <img src="https://picsum.photos/200/200" alt="个人头像" class="hero-img">
+
+&nbsp;           <div class="hero-text">
+
+&nbsp;               <h1>你好，我是一名编程学习者</h1>
+
+&nbsp;               <p>
+
+&nbsp;                   我正在学习前端开发技术，熟悉 HTML、CSS 和 JavaScript 基础。
+
+&nbsp;                   喜欢探索各种有趣的网页效果，致力于打造美观且易用的用户界面。
+
+&nbsp;                   除了编程，我还喜欢阅读、运动和探索新的技术趋势。
+
+&nbsp;               </p>
+
+&nbsp;           </div>
+
+&nbsp;       </section>
+
+
+
+&nbsp;       <!-- 技能展示区域 -->
+
+&nbsp;       <section id="skills" class="skills-section">
+
+&nbsp;           <h2>我的技能</h2>
+
+&nbsp;           <div class="skills-cards">
+
+&nbsp;               <div class="card">
+
+&nbsp;                   <h3>HTML</h3>
+
+&nbsp;                   <p>能够编写语义化的 HTML 结构，熟悉常用标签和属性，了解 HTML5 新特性。</p>
+
+&nbsp;               </div>
+
+&nbsp;               <div class="card">
+
+&nbsp;                   <h3>CSS</h3>
+
+&nbsp;                   <p>掌握 CSS 基础样式、Flex 布局、Grid 布局，能够实现响应式页面设计。</p>
+
+&nbsp;               </div>
+
+&nbsp;               <div class="card">
+
+&nbsp;                   <h3>JavaScript</h3>
+
+&nbsp;                   <p>了解 JS 基础语法，能够实现简单的交互效果，如表单验证、页面动态修改等。</p>
+
+&nbsp;               </div>
+
+&nbsp;           </div>
+
+&nbsp;       </section>
+
+&nbsp;   </main>
+
+
+
+&nbsp;   <!-- 页脚 -->
+
+&nbsp;   <footer id="contact">
+
+&nbsp;       <p>© 2026 我的个人主页 | 联系方式：example@mail.com</p>
+
+&nbsp;   </footer>
+
+</body>
+
+</html>
+
